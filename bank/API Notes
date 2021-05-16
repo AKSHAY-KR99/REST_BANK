@@ -1,0 +1,73 @@
+Bank App API notes
+
+1. "http://127.0.0.1:8000/api/bank/v1/usercreation/" (POST)
+
+    to create a user, enter required field such as firstname,lastname,username,
+    password and create a user
+
+
+
+2. "http://127.0.0.1:8000/api/bank/v1/login/" (POST)
+
+    login to your account using the username and password, then Token authentication
+    occure, it generate a token , using that token you can login
+
+
+
+3."http://127.0.0.1:8000/api/bank/v1/accountcreation/" (POST)
+
+    here you can create account by entering the field, account_type and username
+    accno generate automaticaly and balance default as 0.0
+
+
+
+4. "http://127.0.0.1:8000/api/bank/v1/deposit/<int:accno>" (POST)
+
+    deposit amount using the api link , account number should be enter on your
+    API link
+
+
+
+5. "http://127.0.0.1:8000/api/bank/v1/withdraw/<int:accno>" (POST)
+
+    withdraw amount using the api link , account number should be enter on your
+    API link
+
+
+
+
+6."http://127.0.0.1:8000/api/bank/v1/balance/<int:accno>" (GET)
+
+    know the account balance using the API, account number should be enter
+    on API link
+
+
+
+7. 'http://127.0.0.1:8000/api/bank/v1/transaction/<int:accno>' (POST)
+
+    you can done your transactions. the from account number on API link
+    enter to_account number and amount
+
+
+
+8. 'http://127.0.0.1:8000/api/bank/v1/trans-history/<int:accno>' (GET)
+
+    view transaction history of current account number
+
+
+
+9.'http://127.0.0.1:8000/api/bank/v1/trans-history/credit/<int:accno>' (GET)
+
+    view credit transaction history of current account number
+
+
+
+10.'http://127.0.0.1:8000/api/bank/v1/trans-history/debit/<int:accno>' (GET)
+
+    view debit transaction history of current account number
+
+
+
+11. "http://127.0.0.1:8000/api/bank/v1/logout/"
+
+    logout from current user
